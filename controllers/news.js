@@ -15,7 +15,7 @@ newspapers.forEach(async (newspaper) => {
         const url = $(this).attr("href");
         articles.push({
             title,
-            url,
+            url: newspaper.base + url,
             source: newspaper.name,
         });
     });
@@ -23,4 +23,8 @@ newspapers.forEach(async (newspaper) => {
 
 exports.getNews = async (req, res, next) => {
     res.json(articles);
+};
+
+exports.getHome = (req, res, next) => {
+    res.json("Welcome to my climate news api");
 };
