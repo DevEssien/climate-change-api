@@ -6,6 +6,6 @@ const app = express();
 
 app.use(newsRoute);
 
-app.listen(8000, () => {
-    console.log("server is spinning at port 8000");
+app.listen(8080, () => {
+    console.log("server is spinning at port 8080");
 });
